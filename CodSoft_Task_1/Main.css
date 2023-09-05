@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap');
+
+*,body{
+  margin:0px;
+  padding:0px;
+  box-sizing:border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+.container{
+  min-height:80vh;
+  background:#000000fa;
+  display:flex;
+
+}
+.col-6{width:50%; display:flex; overflow-x:hidden;}
+
+.col-6:nth-child(2){
+  align-items:flex-end;
+}
+
+
+.col-6:nth-child(1){
+  align-items:center;
+  flex-flow:column wrap;
+  padding:2em;
+  justify-content:center;
+  line-height:1.8;
+  text-align:center;
+  color:white;
+}
+
+.col-6:nth-child(1) *{
+  margin-top:20px;
+}
+
+.col-6:nth-child(1) > p{
+ color: #f5f5f559;
+font-size: 20px;
+line-height:2;
+}
+
+.col-6:nth-child(1) > h1{
+ font-size:75px;
+ letter-spacing:10px;
+}
+
+
+
+.img-wrapper{
+  width:100%;
+  height:90%;
+  position:relative;
+  right:-30px;
+
+}
+
+
+
+.img-wrapper > img{width:100%; height:100%; opacity:0.75;
+}
+
+
+button {
+padding: 17px 40px;
+border-radius: 50px;
+border: 0;
+box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+letter-spacing: 1.5px;
+text-transform: uppercase;
+font-size: 15px;
+transition: all .5s ease;
+color:hsl(0, 0%, 100%);
+border:2px solid hsl(0, 0%, 100%);
+cursor:pointer;
+background-color: white;
+
+color:white;
+background-color:transparent;
+}
+
+button:hover {
+letter-spacing: 3px;
+color: black;
+box-shadow: black;
+background-color:white;
+}
+
+
+
+/* timeline */
+
+.timeline-container {
+padding:20px;
+background:#00000003;
+}
+
+.timeline {
+text-align:center;
+margin-top:2em;
+margin-bottom:2em;
+position:relative;
+display:grid;
+place-items:center;
+width:100%;
+}
+
+.timeline > ul{width:75%; margin-top:40px; position:relative}
+
+.timeline > ul::after{
+content:"\00a0";
+position:absolute;
+left:50%;
+top:1.5px;
+width:3px;
+height:100%;
+background:black;
+
+}
+
+.timeline > ul>li{
+width:45%;
+margin:0px;
+margin-top:50px;
+margin-bottom:50px;
+list-style:none;
+background:#0000000d;
+padding:15px;
+position:relative;
+border: 2px solid #00000012;
+}
+
+.timeline > ul>li:first-of-type{
+margin:0px;
+}
+
+span:nth-child(1)::after{
+content:"\00a0";
+width:18px;
+height:18px;
+border-radius:100%;
+background:black;
+position:absolute;
+top:0px;
+cursor:pointer;
+}
+
+span:nth-child(2){
+background:black;
+position:absolute;
+top:-50%;
+left:0px;
+width:fit-content;
+height:fit-content;
+color:white;
+border-radius:25px;
+padding:10px 25px 10px 25px;
+cursor:pointer;
+}
+
+
+ul > li:nth-child(even) > span:nth-child(1)::after{
+left:-12.7%;
+}
+
+ul > li:nth-child(odd) > span:nth-child(1)::after{
+right:-13.7%;
+}
+
+
+.timeline > ul>li > p{
+line-height:1.6;
+letter-spacing:1px;;
+padding:10px;
+}
+
+.timeline > ul > li:nth-child(odd){
+float:left;
+clear:right;
+}
+
+.timeline > ul > li:nth-child(even){
+float:right;
+clear:left;
+}
+
+
+.footer{
+    text-align: center;
+    background: black;
+    width: 100%;
+    padding: 15px;
+    color: white;
+    line-height:2
+}
+
+.footer i{
+    font-size:30px;
+}
+
+.footer *{margin-top:20px;}
+
+
+
+@media (max-width:1200px){
+.container{
+flex-direction:column;
+}
+
+
+.col-6:nth-child(1){
+  align-items:center;
+  flex-flow:column wrap;
+  padding:0.5em;
+  justify-content:center;
+  line-height:1.8;
+  text-align:center;
+  color:white;
+}
+
+.col-6:nth-child(1)>h1{
+  font-size:60px;}
+.col-6{width:100%}
+
+.timeline > ul{width:95% !important}
+
+.timeline > ul > li{width:100%  !important; }
+
+.timeline > ul::after{
+left:-10px;
+}
+
+.timeline > ul>li:first-of-type{
+margin-top:0em !important;
+
+}
+
+.timeline > ul>li{
+clear:both !important;
+float:left !important;
+margin-top:3em !important;
+margin-bottom:3em !important;
+
+}
+
+li:nth-child(even) > span:nth-child(1)::after{
+left:-17.5px !important;
+top:-2.5px  !important;
+
+}
+
+li:nth-child(odd) > span:nth-child(1)::after{
+left:-17.5px !important;
+top:-2.5px  !important;
+
+}
+
+li > span:nth-child(2){
+top:0px !important;
+margin-top:-50px !important;
+
+}
+
+ul{display:flex !important; flex-direction: column !important; gap:10% !important;}
+
+}
+
